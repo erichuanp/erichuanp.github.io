@@ -1,6 +1,17 @@
 ## Hi, there. I'm Chuan. 
 
 _My dream is to be a Full Stack Developer._
+````Java
+
+System.out.println("Starting Introduction Programe. ");
+ChuanPeng = Human(GENDER.MALE);
+ChuanPeng.setBirthday(timestamp:date(960460331));
+ChuanPeng.setPronoun(pronouns:{"him", "his", "it", "its"});
+ChuanPeng.setWorkInfo(identityInWork:"Student", placeToWork:"UCSD");
+ChuanPeng.setStatus(activities:{ACTIVITY.STUDY("Java"), ACTIVITY.STUDY("Python")});
+
+````
+
 
 ### Java Projects
 - [JavaPractices](https://github.com/erichuanp/MyPersonalPracticeInJava)
@@ -13,6 +24,6 @@ _My dream is to be a Full Stack Developer._
 - [LinkedIn](linkedin.com/in/chuan-peng-9b3912210)
 - [脉脉](https://maimai.cn/contact/detail/232475238)
 - [Bilibili](https://space.bilibili.com/4689754)
-- WeChat
+- [WeChat](pics/wechatqrcode2.jpg)
 
   ![Image](pics/wechatqrcode2.jpg)
