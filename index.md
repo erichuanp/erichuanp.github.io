@@ -14,4 +14,5 @@ _My dream is to be a Full Stack Developer._
 - [脉脉](https://maimai.cn/contact/detail/232475238)
 - [Bilibili](https://space.bilibili.com/4689754)
 - WeChat
-- <img src=pics/wechatqrcode.jpg width=50% />
+
+  <img src=pics/wechatqrcode.jpg width=50% />
