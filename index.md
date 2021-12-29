@@ -15,4 +15,4 @@ _My dream is to be a Full Stack Developer._
 - [Bilibili](https://space.bilibili.com/4689754)
 - WeChat
 
-  ![Image](pics/wechatqrcode.jpg)
+  ![Image](pics/wechatqrcode2.jpg)
