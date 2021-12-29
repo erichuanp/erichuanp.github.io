@@ -1,37 +1,18 @@
-## Be Dihydrogen Monoxide, My Friend. 
+## Hi, there. I'm Chuan. 
 
-You can use the [editor on GitHub](https://github.com/erichuanp/erichuanp.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+_My dream is to be a Full Stack Developer._
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Java Projects
+- [JavaPractices](https://github.com/erichuanp/MyPersonalPracticeInJava)
 
-### Markdown
+<font color=grey size=2>Waiting for adding...</font>
+### Python Projects
+- [Bilibili_AddToViewLater](https://github.com/erichuanp/Bilibili_AddToViewLater)(Remake of [BilibiliSeeLaterTool](https://github.com/erichuanp/BilibiliSeeLaterTool))
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Contact Me
+- [LinkedIn](linkedin.com/in/chuan-peng-9b3912210)
+- [脉脉](https://maimai.cn/contact/detail/232475238)
+- [Bilibili](https://space.bilibili.com/4689754)
+- WeChat
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/erichuanp/erichuanp.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![Image](pics/wechatqrcode.jpg)
