@@ -24,6 +24,6 @@ ChuanPeng.setStatus(activities:{ACTIVITY.STUDY("Java"), ACTIVITY.STUDY("Python")
 - [LinkedIn](linkedin.com/in/chuan-peng-9b3912210)
 - [脉脉](https://maimai.cn/contact/detail/232475238)
 - [Bilibili](https://space.bilibili.com/4689754)
-- [WeChat](pics/wechatqrcode2.jpg)
+- [WeChat](pics/wechatqrcode.jpg)
 
   ![Image](pics/wechatqrcode2.jpg)
