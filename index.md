@@ -1,4 +1,4 @@
-## Hi, there. I'm Chuan. Here is my personal page. 
+## Hi, there. I'm Chuan. This is my personal page. 
 
 _My dream is to be a Full Stack Developer._
 ````Java
