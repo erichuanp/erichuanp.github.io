@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Be Dihydrogen Monoxide, My Friend. 
 
 You can use the [editor on GitHub](https://github.com/erichuanp/erichuanp.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
