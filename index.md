@@ -17,7 +17,7 @@ ChuanPeng.Introduce();
 ### Java Projects
 - [JavaPractices](https://github.com/erichuanp/MyPersonalPracticeInJava)
 
-<font color=grey size=2>Waiting for adding...</font>
+<font color=grey size=2>   Waiting for adding...</font>
 ### Python Projects
 - [Bilibili_AddToViewLater](https://github.com/erichuanp/Bilibili_AddToViewLater)(Remake of [BilibiliSeeLaterTool](https://github.com/erichuanp/BilibiliSeeLaterTool))
 
