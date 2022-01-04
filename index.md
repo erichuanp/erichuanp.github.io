@@ -22,7 +22,7 @@ ChuanPeng.Introduce();
 - [Bilibili_AddToViewLater](https://github.com/erichuanp/Bilibili_AddToViewLater)(Remake of [BilibiliSeeLaterTool](https://github.com/erichuanp/BilibiliSeeLaterTool))
 
 ### Contact Me
-- [LinkedIn](linkedin.com/in/chuan-peng-9b3912210)
+- [LinkedIn](https://www.linkedin.com/in/chuan-peng-9b3912210/)
 - [GitHub](https://github.com/erichuanp)
 - [脉脉](https://maimai.cn/contact/detail/232475238)
 - [Bilibili](https://space.bilibili.com/4689754)
