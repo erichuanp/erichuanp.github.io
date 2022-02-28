@@ -24,7 +24,7 @@ ChuanPeng.Introduce();
 ### Contact Me
 - [LinkedIn](https://www.linkedin.com/in/chuan-peng-9b3912210/)
 - [GitHub](https://github.com/erichuanp)
-- [脉脉](https://maimai.cn/contact/detail/232475238)
+- [脉脉](https://maimai.cn/profile2?webuid=322MRdRJ)
 - [Bilibili](https://space.bilibili.com/4689754)
 - [WeChat](pics/wechatqrcode.jpg)
 
