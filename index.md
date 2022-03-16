@@ -20,6 +20,7 @@ ChuanPeng.Introduce();
 <font color=grey size=2>   Waiting for adding...</font>
 ### Python Projects
 - [Bilibili_AddToViewLater](https://github.com/erichuanp/Bilibili_AddToViewLater)(Remake of [BilibiliSeeLaterTool](https://github.com/erichuanp/BilibiliSeeLaterTool))
+- [Pong](https://github.com/erichuanp/Pong)
 
 ### Contact Me
 - [LinkedIn](https://www.linkedin.com/in/chuan-peng-9b3912210/)
