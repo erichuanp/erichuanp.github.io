@@ -9,15 +9,13 @@ ChuanPeng.setBirthday(timestamp:date(960460331));
 ChuanPeng.setPronoun(pronouns:{"him", "his", "it", "its"});
 ChuanPeng.setWorkInfo(identityInWork:"Student", placeToWork:"UCSD");
 ChuanPeng.setStatus(activities:{ACTIVITY.STUDY("Java"), ACTIVITY.STUDY("Python")});
-ChuanPeng.Introduce();
+ChuanPeng.introduce();
 
 ````
 
 
 ### Java Projects
-- [JavaPractices](https://github.com/erichuanp/MyPersonalPracticeInJava)
-
-<font color=grey size=2>   Waiting for adding...</font>
+- ...
 ### Python Projects
 - [Bilibili_AddToViewLater](https://github.com/erichuanp/Bilibili_AddToViewLater)(Remake of [BilibiliSeeLaterTool](https://github.com/erichuanp/BilibiliSeeLaterTool))
 - [Pong](https://github.com/erichuanp/Pong)
@@ -26,7 +24,6 @@ ChuanPeng.Introduce();
 - [LinkedIn](https://www.linkedin.com/in/chuan-peng-9b3912210/)
 - [GitHub](https://github.com/erichuanp)
 - [脉脉](https://maimai.cn/profile2?webuid=322MRdRJ)
-- [Bilibili](https://space.bilibili.com/4689754)
 - [WeChat](pics/wechatqrcode.jpg)
 
   ![QRCode](pics/wechatqrcode2.jpg)
