@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Code size={24} />
-            <span className="text-xl font-bold">TechHub</span>
+            <span className="text-xl font-bold">Tendou</span>
           </div>
-          <p className="text-gray-400">&copy; {currentYear} TechHub. All rights reserved.</p>
+          <p className="text-gray-400">&copy; {currentYear} Tendou. All rights reserved.</p>
         </div>
       </div>
     </footer>

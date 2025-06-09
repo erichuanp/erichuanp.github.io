@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           className="flex items-center space-x-2 text-xl font-bold text-primary-600"
         >
           <Code size={28} />
-          <span>TechHub</span>
+          <span>Tendou</span>
         </NavLink>
 
         {/* Desktop Menu */}

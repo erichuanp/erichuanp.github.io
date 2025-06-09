@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b main"
+    "deploy": "gh-pages -d dist -b main https://github.com/erichuanp/erichuanp.github.io.git"
   },
   "dependencies": {
     "framer-motion": "^11.0.8",
