@@ -15,6 +15,11 @@ import NotFoundPage from './pages/NotFoundPage';
 
 // Tools
 import JsonFormatter from './tools/JsonFormatter';
+import Base64Converter from './tools/Base64Converter';
+import UrlConverter from './tools/UrlConverter';
+import MarkdownPreview from './tools/MarkdownPreview';
+import RegexTester from './tools/RegexTester';
+import TextDiff from './tools/TextDiff';
 
 function App() {
   const location = useLocation();
@@ -28,6 +33,11 @@ function App() {
           <Route path="blogs/:category" element={<BlogCategoryPage />} />
           <Route path="tools" element={<ToolsPage />} />
           <Route path="tools/json-formatter" element={<JsonFormatter />} />
+          <Route path="tools/base64-converter" element={<Base64Converter />} />
+          <Route path="tools/url-converter" element={<UrlConverter />} />
+          <Route path="tools/markdown-preview" element={<MarkdownPreview />} />
+          <Route path="tools/regex-tester" element={<RegexTester />} />
+          <Route path="tools/text-diff" element={<TextDiff />} />
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

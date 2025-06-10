@@ -20,23 +20,28 @@ const toolsData: { [key: string]: { name: string; description: string; toolPath?
     },
     {
       name: 'Base64 编码解码器',
-      description: '文本与 Base64 格式之间的相互转换工具'
+      description: '文本与 Base64 格式之间的相互转换工具',
+      toolPath: '/tools/base64-converter'
     },
     {
       name: 'URL 编码解码器',
-      description: '处理 URL 参数的编码和解码操作'
+      description: '处理 URL 参数的编码和解码操作',
+      toolPath: '/tools/url-converter'
     },
     {
       name: 'Markdown 预览器',
-      description: '实时预览 Markdown 文档的渲染效果'
+      description: '实时预览 Markdown 文档的渲染效果',
+      toolPath: '/tools/markdown-preview'
     },
     {
       name: '正则表达式测试器',
-      description: '测试和验证正则表达式的匹配结果'
+      description: '测试和验证正则表达式的匹配结果',
+      toolPath: '/tools/regex-tester'
     },
     {
       name: '文本差异对比',
-      description: '比较两段文本的差异并高亮显示'
+      description: '比较两段文本的差异并高亮显示',
+      toolPath: '/tools/text-diff'
     }
   ],
   '开发者工具': [
