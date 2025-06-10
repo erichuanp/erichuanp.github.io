@@ -28,19 +28,9 @@ const BlogCategoryPage: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
   const [headings, setHeadings] = useState<Heading[]>([]);
-  const [showToc, setShowToc] = useState(true);
   const [isHovering, setIsHovering] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!isHovering) {
-        setShowToc(window.scrollY < 100);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHovering]);
+  // 移除滚动监听逻辑，桌面端始终显示导航栏
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -179,7 +169,12 @@ const BlogCategoryPage: React.FC = () => {
         return matches.map((match) => ({
           level: match[1].length,
           text: match[2],
-          id: match[2].toLowerCase().replace(/[^\w]+/g, '-')
+          id: match[2]
+            .toLowerCase()
+            .replace(/[^\w\u4e00-\u9fff\s-]/g, '') // 保留中文字符、英文字符、数字、空格和连字符
+            .replace(/\s+/g, '-') // 空格替换为连字符
+            .replace(/-+/g, '-') // 多个连字符合并为一个
+            .replace(/^-|-$/g, '') // 移除开头和结尾的连字符
         }));
       };
 
@@ -189,6 +184,70 @@ const BlogCategoryPage: React.FC = () => {
 
   const handlePostClick = (post: BlogPost) => {
     setSelectedPost(post);
+  };
+
+  // 自定义 ReactMarkdown 组件，为标题添加正确的 ID
+  const MarkdownComponents = {
+    h1: ({ children, ...props }: any) => {
+      const text = children?.toString() || '';
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\u4e00-\u9fff\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      return <h1 id={id} {...props}>{children}</h1>;
+    },
+    h2: ({ children, ...props }: any) => {
+      const text = children?.toString() || '';
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\u4e00-\u9fff\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      return <h2 id={id} {...props}>{children}</h2>;
+    },
+    h3: ({ children, ...props }: any) => {
+      const text = children?.toString() || '';
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\u4e00-\u9fff\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      return <h3 id={id} {...props}>{children}</h3>;
+    },
+    h4: ({ children, ...props }: any) => {
+      const text = children?.toString() || '';
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\u4e00-\u9fff\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      return <h4 id={id} {...props}>{children}</h4>;
+    },
+    h5: ({ children, ...props }: any) => {
+      const text = children?.toString() || '';
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\u4e00-\u9fff\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      return <h5 id={id} {...props}>{children}</h5>;
+    },
+    h6: ({ children, ...props }: any) => {
+      const text = children?.toString() || '';
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\u4e00-\u9fff\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      return <h6 id={id} {...props}>{children}</h6>;
+    },
   };
 
   if (loading) {
@@ -210,7 +269,7 @@ const BlogCategoryPage: React.FC = () => {
           <div className="relative">
             <TableOfContents
               headings={headings}
-              isVisible={showToc || isHovering}
+              isVisible={true} // 桌面端始终显示，移动端通过组件内部逻辑控制
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             />
@@ -223,7 +282,8 @@ const BlogCategoryPage: React.FC = () => {
               </button>
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeRaw, rehypeSlug]}
+                rehypePlugins={[rehypeRaw]}
+                components={MarkdownComponents}
                 className="markdown-content"
               >
                 {selectedPost.content}

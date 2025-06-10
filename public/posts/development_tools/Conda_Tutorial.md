@@ -36,7 +36,7 @@ Conda 是一个虚拟环境管理工具，用户可以创建多个 Conda 环境�
     rm Miniconda3-*.sh  # 运行完后，记得删除安装脚本
     ```
 
-## Conda的常用命令
+## Conda 的常用命令
 
 - 创建环境
     ```bash
