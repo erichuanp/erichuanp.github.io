@@ -135,13 +135,12 @@ const toolsData: { [key: string]: { name: string; description: string; toolPath?
       name: 'User Agent 解析',
       description: '解析和分析浏览器 User Agent 字符串',
       toolPath: '/tools/user-agent-parser'
+    },
+    {
+      name: 'HTTP 状态码查询',
+      description: '查询 HTTP 状态码的含义和说明',
+      toolPath: '/tools/http-status'
     }
-    // ,
-    // {
-    //   name: 'HTTP 状态码查询',
-    //   description: '查询 HTTP 状态码的含义和说明',
-    //   toolPath: '/tools/http-status'
-    // }
   ]
 };
 
