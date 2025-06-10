@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Copy, Download, Upload, RotateCcw, Check } from 'lucide-react';
+import { Copy, Download, Upload, RotateCcw, Check, ArrowRight, ArrowLeft } from 'lucide-react';
 import PageTransition from '../components/common/PageTransition';
 
 const JsonFormatter: React.FC = () => {
@@ -122,7 +122,7 @@ const JsonFormatter: React.FC = () => {
   return (
     <PageTransition>
       <div className="container py-16">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-8 text-center">
             <h1 className="mb-4 text-4xl font-bold text-gray-900">JSON 格式化器</h1>
@@ -131,62 +131,20 @@ const JsonFormatter: React.FC = () => {
             </p>
           </div>
 
-          {/* Controls */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6"
-          >
-            <div className="flex flex-wrap gap-3 justify-center">
-              <button
-                onClick={formatJson}
-                className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-              >
-                格式化
-              </button>
-              <button
-                onClick={compressJson}
-                className="px-4 py-2 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-colors"
-              >
-                压缩
-              </button>
-              <button
-                onClick={validateJson}
-                className="px-4 py-2 bg-accent-600 text-white rounded-lg hover:bg-accent-700 transition-colors"
-              >
-                验证
-              </button>
-              <button
-                onClick={loadExample}
-                className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-              >
-                加载示例
-              </button>
-              <button
-                onClick={clearAll}
-                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2"
-              >
-                <RotateCcw size={16} />
-                清空
-              </button>
-            </div>
-          </motion.div>
-
-          {/* Main Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Input Section */}
+          {/* Main Content - Three Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Input Section - 5 columns */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="space-y-4"
+              className="lg:col-span-5 space-y-4"
             >
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-semibold text-gray-900">输入 JSON</h2>
                 <div className="flex gap-2">
-                  <label className="px-3 py-1 bg-gray-100 text-gray-700 rounded cursor-pointer hover:bg-gray-200 transition-colors flex items-center gap-2">
-                    <Upload size={16} />
+                  <label className="px-3 py-1 bg-gray-100 text-gray-700 rounded cursor-pointer hover:bg-gray-200 transition-colors flex items-center gap-2 text-sm">
+                    <Upload size={14} />
                     上传文件
                     <input
                       type="file"
@@ -205,12 +163,58 @@ const JsonFormatter: React.FC = () => {
               />
             </motion.div>
 
-            {/* Output Section */}
+            {/* Control Buttons - 2 columns */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="lg:col-span-2 flex flex-col justify-center"
+            >
+              <div className="space-y-3">
+                <button
+                  onClick={formatJson}
+                  className="w-full px-4 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center gap-2 font-medium"
+                >
+                  <ArrowRight size={16} />
+                  格式化
+                </button>
+                <button
+                  onClick={compressJson}
+                  className="w-full px-4 py-3 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-colors flex items-center justify-center gap-2 font-medium"
+                >
+                  <ArrowRight size={16} />
+                  压缩
+                </button>
+                <button
+                  onClick={validateJson}
+                  className="w-full px-4 py-3 bg-accent-600 text-white rounded-lg hover:bg-accent-700 transition-colors flex items-center justify-center gap-2 font-medium"
+                >
+                  验证
+                </button>
+                <div className="border-t border-gray-200 pt-3">
+                  <button
+                    onClick={loadExample}
+                    className="w-full px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center gap-2 text-sm"
+                  >
+                    加载示例
+                  </button>
+                  <button
+                    onClick={clearAll}
+                    className="w-full mt-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2 text-sm"
+                  >
+                    <RotateCcw size={14} />
+                    清空
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Output Section - 5 columns */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-y-4"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="lg:col-span-5 space-y-4"
             >
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-semibold text-gray-900">输出结果</h2>
@@ -218,17 +222,17 @@ const JsonFormatter: React.FC = () => {
                   <button
                     onClick={copyToClipboard}
                     disabled={!output}
-                    className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center gap-2 text-sm"
                   >
-                    {copied ? <Check size={16} /> : <Copy size={16} />}
+                    {copied ? <Check size={14} /> : <Copy size={14} />}
                     {copied ? '已复制' : '复制'}
                   </button>
                   <button
                     onClick={downloadJson}
                     disabled={!output}
-                    className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center gap-2 text-sm"
                   >
-                    <Download size={16} />
+                    <Download size={14} />
                     下载
                   </button>
                 </div>
@@ -247,7 +251,7 @@ const JsonFormatter: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg"
+              className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg"
             >
               <p className="text-red-700 font-medium">错误信息:</p>
               <p className="text-red-600 mt-1">{error}</p>
@@ -258,7 +262,7 @@ const JsonFormatter: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-12 bg-white rounded-lg shadow-md p-6"
           >
             <h3 className="text-xl font-semibold text-gray-900 mb-4">使用说明</h3>
