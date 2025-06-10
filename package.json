@@ -8,8 +8,7 @@
     "predev": "npm run generateIndex",
     "dev": "vite",
     "prebuild": "npm run generateIndex",
-    "build": "vite build",
-    "predeploy": "npm run generateIndex && npm run build", 
+    "build": "vite build && copy dist\\index.html dist\\404.html",    "predeploy": "npm run generateIndex && npm run build", 
     "deploy": "gh-pages -d dist -b main -r https://github.com/erichuanp/erichuanp.github.io.git",
     "lint": "eslint .",
     "preview": "vite preview"
