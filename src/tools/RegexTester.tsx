@@ -276,17 +276,17 @@ const RegexTester: React.FC = () => {
                 <div className="space-y-2">
                   <h4 className="font-medium text-gray-900">基础模式</h4>
                   <div className="space-y-1 text-sm">
-                    <div><code className="bg-gray-100 px-2 py-1 rounded">\\d+</code> - 数字</div>
-                    <div><code className="bg-gray-100 px-2 py-1 rounded">\\w+</code> - 单词字符</div>
-                    <div><code className="bg-gray-100 px-2 py-1 rounded">\\s+</code> - 空白字符</div>
+                    <div><code className="bg-gray-100 px-2 py-1 rounded">{'\\d+'}</code> - 数字</div>
+                    <div><code className="bg-gray-100 px-2 py-1 rounded">{'\\w+'}</code> - 单词字符</div>
+                    <div><code className="bg-gray-100 px-2 py-1 rounded">{'\\s+'}</code> - 空白字符</div>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-medium text-gray-900">实用模式</h4>
                   <div className="space-y-1 text-sm">
-                    <div><code className="bg-gray-100 px-2 py-1 rounded">^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$</code> - 邮箱</div>
-                    <div><code className="bg-gray-100 px-2 py-1 rounded">^1[3-9]\\d{9}$</code> - 手机号</div>
-                    <div><code className="bg-gray-100 px-2 py-1 rounded">^https?://</code> - URL</div>
+                    <div><code className="bg-gray-100 px-2 py-1 rounded">{'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'}</code> - 邮箱</div>
+                    <div><code className="bg-gray-100 px-2 py-1 rounded">{'^1[3-9]\\d{9}$'}</code> - 手机号</div>
+                    <div><code className="bg-gray-100 px-2 py-1 rounded">{'^https?://'}</code> - URL</div>
                   </div>
                 </div>
               </div>
