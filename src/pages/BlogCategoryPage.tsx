@@ -292,7 +292,9 @@ const BlogCategoryPage: React.FC = () => {
           </div>
         ) : (
           <div className="mb-12">
-            <h1 className="mb-4 text-center">{category?.replace(/_/g, ' ')}</h1>
+            <h1 className="mb-4 text-center">
+              {category?.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())}
+            </h1>
             <div className="grid gap-6">
               {posts.map((post, index) => (
                 <motion.div
