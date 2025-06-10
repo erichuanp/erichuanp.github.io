@@ -7,7 +7,7 @@ const ContactsPage: React.FC = () => {
     <PageTransition>
       <UnderConstruction 
         title="Contact Us" 
-        message="Our contact page is coming soon. In the meantime, you can reach us through our social media channels."
+        message="建设中"
       />
     </PageTransition>
   );

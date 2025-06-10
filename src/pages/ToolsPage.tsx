@@ -12,9 +12,9 @@ const ToolsPage: React.FC = () => {
     <PageTransition>
       <div className="container py-16">
         <div className="mb-12 text-center">
-          <h1 className="mb-4">Development Tools</h1>
+          <h1 className="mb-4">效率工具</h1>
           <p className="max-w-2xl mx-auto text-xl text-gray-600">
-            Discover the essential tools that can enhance your development workflow and boost productivity.
+            探索提高生产力的小工具
           </p>
         </div>
         

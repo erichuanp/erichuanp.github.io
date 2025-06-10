@@ -7,29 +7,29 @@ const BlogsPage: React.FC = () => {
   const blogs = [
     {
       id: 1,
-      title: 'Development Tools',
-      description: 'Discover the essential development tools that can boost your productivity and streamline your workflow. From code editors to version control systems, we cover everything you need.',
+      title: '开发工具',
+      description: '探索能够提升生产力、简化工作流程的必备开发工具。',
       image: 'https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'Development Tools'
     },
     {
       id: 2,
-      title: 'Frontend Development',
-      description: 'Learn about the latest trends and best practices in frontend development. Explore modern frameworks, responsive design techniques, and performance optimization strategies.',
+      title: '前端开发',
+      description: '了解前端开发的最新趋势和最佳实践。探索现代框架、响应式设计技术和性能优化策略。',
       image: 'https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'Frontend Development'
     },
     {
       id: 3,
-      title: 'Backend Development',
-      description: 'Dive into server-side programming with our comprehensive guides on backend development. From RESTful APIs to database design, we cover the fundamentals and advanced topics.',
+      title: '后端开发',
+      description: '通过全面的后端开发指南，深入了解服务器端编程。',
       image: 'https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'Backend Development'
     },
     {
       id: 4,
-      title: 'Databases',
-      description: 'Explore different database systems and learn how to choose the right one for your project. We cover relational databases, NoSQL solutions, and data modeling techniques.',
+      title: '数据库',
+      description: '探索不同的数据库系统，并学习如何为项目选择合适的系统。',
       image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'Databases'
     }
@@ -39,9 +39,9 @@ const BlogsPage: React.FC = () => {
     <PageTransition>
       <div className="container py-16">
         <div className="mb-12 text-center">
-          <h1 className="mb-4">Developer Blogs</h1>
+          <h1 className="mb-4">开发博客</h1>
           <p className="max-w-2xl mx-auto text-xl text-gray-600">
-            Explore our collection of in-depth articles covering various aspects of software development.
+            各种工具和技术栈的使用经验
           </p>
         </div>
         

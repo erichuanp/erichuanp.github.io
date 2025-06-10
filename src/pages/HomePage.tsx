@@ -6,8 +6,8 @@ const HomePage: React.FC = () => {
   return (
     <PageTransition>
       <UnderConstruction 
-        title="Welcome to Tendou" 
-        message="Our home page is currently under construction. We're working hard to bring you the best development resources. Stay tuned for our launch!"
+        title="Welcome To Tendou" 
+        message="施工中"
       />
     </PageTransition>
   );
