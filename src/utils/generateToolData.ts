@@ -47,82 +47,101 @@ const toolsData: { [key: string]: { name: string; description: string; toolPath?
   '开发者工具': [
     {
       name: '颜色选择器',
-      description: 'RGB、HEX、HSL 等颜色格式转换和调色板'
+      description: 'RGB、HEX、HSL 等颜色格式转换和调色板',
+      toolPath: '/tools/color-picker'
     },
     {
       name: 'CSS 生成器',
-      description: '生成阴影、渐变、动画等 CSS 代码'
+      description: '生成阴影、渐变、动画等 CSS 代码',
+      toolPath: '/tools/css-generator'
     },
     {
       name: '二维码生成器',
-      description: '将文本或链接转换为二维码图片'
+      description: '将文本或链接转换为二维码图片',
+      toolPath: '/tools/qr-generator'
     },
     {
       name: '哈希计算器',
-      description: '计算文本的 MD5、SHA1、SHA256 等哈希值'
+      description: '计算文本的 MD5、SHA1、SHA256 等哈希值',
+      toolPath: '/tools/hash-calculator'
     },
     {
       name: '时间戳转换器',
-      description: 'Unix 时间戳与标准日期格式互相转换'
+      description: 'Unix 时间戳与标准日期格式互相转换',
+      toolPath: '/tools/timestamp-converter'
     },
     {
       name: 'UUID 生成器',
-      description: '生成各种版本的唯一标识符 UUID'
+      description: '生成各种版本的唯一标识符 UUID',
+      toolPath: '/tools/uuid-generator'
     }
   ],
   '计算工具': [
     {
       name: '单位转换器',
-      description: '长度、重量、温度、面积等单位换算'
+      description: '长度、重量、温度、面积等单位换算',
+      toolPath: '/tools/unit-converter'
     },
     {
       name: '进制转换器',
-      description: '二进制、八进制、十进制、十六进制互转'
+      description: '二进制、八进制、十进制、十六进制互转',
+      toolPath: '/tools/base-converter'
     },
     {
       name: '密码生成器',
-      description: '根据自定义规则生成安全密码'
+      description: '根据自定义规则生成安全密码',
+      toolPath: '/tools/password-generator'
     },
     {
       name: 'Lorem Ipsum 生成器',
-      description: '生成用于设计和排版的占位文本'
+      description: '生成用于设计和排版的占位文本',
+      toolPath: '/tools/lorem-generator'
     },
     {
       name: '百分比计算器',
-      description: '计算百分比、增长率、折扣等'
+      description: '计算百分比、增长率、折扣等',
+      toolPath: '/tools/percentage-calculator'
     }
   ],
   '图片工具': [
     {
       name: '图片压缩器',
-      description: '在浏览器中压缩图片文件大小'
+      description: '在浏览器中压缩图片文件大小',
+      toolPath: '/tools/image-compressor'
     },
     {
       name: '图片格式转换',
-      description: 'JPEG、PNG、WebP 等格式互相转换'
+      description: 'JPEG、PNG、WebP 等格式互相转换',
+      toolPath: '/tools/image-converter'
     },
     {
       name: '图片尺寸调整',
-      description: '批量调整图片的宽度和高度'
+      description: '批量调整图片的宽度和高度',
+      toolPath: '/tools/image-resizer'
     },
     {
       name: '图片滤镜',
-      description: '为图片添加各种视觉效果和滤镜'
+      description: '为图片添加各种视觉效果和滤镜',
+      toolPath: '/tools/image-filter'
     }
   ],
   '网络工具': [
     {
       name: 'IP 地址查询',
-      description: '查询 IP 地址的地理位置和网络信息'
+      description: '查询 IP 地址的地理位置和网络信息',
+      toolPath: '/tools/ip-lookup'
     },
     {
       name: 'User Agent 解析',
-      description: '解析和分析浏览器 User Agent 字符串'
-    },
-    {
-      name: 'HTTP 状态码查询',
-      description: '查询 HTTP 状态码的含义和说明'
+      description: '解析和分析浏览器 User Agent 字符串',
+      toolPath: '/tools/user-agent-parser'
     }
+    // ,
+    // {
+    //   name: 'HTTP 状态码查询',
+    //   description: '查询 HTTP 状态码的含义和说明',
+    //   toolPath: '/tools/http-status'
+    // }
   ]
 };
 
