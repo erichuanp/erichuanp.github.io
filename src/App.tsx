@@ -83,7 +83,7 @@ function App() {
           {/* 网络工具 */}
           <Route path="tools/ip-lookup" element={<IpLookup />} />
           <Route path="tools/user-agent-parser" element={<UserAgentParser />} />
-          {/* <Route path="tools/http-status" element={<HttpStatus />} /> */}
+          <Route path="tools/http-status" element={<HttpStatus />} />
           
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="*" element={<NotFoundPage />} />
