@@ -4,12 +4,15 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "generateIndex": "node scripts/generateIndex.cjs",
+    "predev": "npm run generateIndex",
     "dev": "vite",
+    "prebuild": "npm run generateIndex",
     "build": "vite build",
+    "predeploy": "npm run generateIndex && npm run build", 
+    "deploy": "gh-pages -d dist -b main -r https://github.com/erichuanp/erichuanp.github.io.git",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b main -r https://github.com/erichuanp/erichuanp.github.io.git"
+    "preview": "vite preview"
   },
   "dependencies": {
     "framer-motion": "^11.0.8",
