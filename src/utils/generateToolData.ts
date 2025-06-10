@@ -2,80 +2,155 @@ export interface Tool {
   id: number;
   name: string;
   description: string;
+  category: string;
+  toolPath?: string;
 }
 
-const toolNames = [
-  'Visual Studio Code',
-  'Git',
-  'GitHub',
-  'Docker',
-  'Webpack',
-  'Vite',
-  'Node.js',
-  'npm',
-  'ESLint',
-  'Prettier',
-  'Jest',
-  'Cypress',
-  'TypeScript',
-  'Babel',
-  'Postman',
-  'GraphQL',
-  'React DevTools',
-  'Redux DevTools',
-  'Chrome DevTools',
-  'Lighthouse',
-  'SASS/SCSS',
-  'Tailwind CSS',
-  'Bootstrap',
-  'Material UI',
-  'Storybook',
-  'Figma',
-  'MongoDB Compass',
-  'Redis CLI'
-];
+export interface ToolCategory {
+  title: string;
+  tools: Tool[];
+}
 
-const toolDescriptions = [
-  'A powerful code editor with built-in debugging and Git integration.',
-  'A distributed version control system for tracking changes in source code.',
-  'A platform for hosting and collaborating on Git repositories.',
-  'A platform for developing, shipping, and running applications in containers.',
-  'A static module bundler for modern JavaScript applications.',
-  'A next-generation frontend build tool that significantly improves the development experience.',
-  'A JavaScript runtime built on Chrome\'s V8 JavaScript engine.',
-  'A package manager for the JavaScript programming language.',
-  'A static code analysis tool for identifying problematic patterns in JavaScript code.',
-  'An opinionated code formatter that enforces a consistent style.',
-  'A JavaScript testing framework with a focus on simplicity.',
-  'An end-to-end testing framework designed for modern web applications.',
-  'A strongly typed programming language that builds on JavaScript.',
-  'A JavaScript compiler that converts ECMAScript 2015+ code into backward-compatible versions.',
-  'An API client that makes it easy to create, share, test, and document APIs.',
-  'A query language for APIs and a runtime for executing those queries.',
-  'Browser extensions for debugging React applications.',
-  'Tools for debugging application state changes in Redux.',
-  'Built-in web development tools in the Chrome browser.',
-  'An open-source tool for improving the quality of web pages.',
-  'A preprocessor scripting language that is interpreted into CSS.',
-  'A utility-first CSS framework for rapidly building custom user interfaces.',
-  'A front-end framework for building responsive and mobile-first websites.',
-  'A popular React UI framework that implements Google\'s Material Design.',
-  'A tool for developing UI components in isolation for React, Vue, and Angular.',
-  'A digital design and prototyping tool.',
-  'A GUI for MongoDB database management.',
-  'A command-line interface for Redis, an in-memory data structure store.'
-];
+const toolsData: { [key: string]: { name: string; description: string; toolPath?: string }[] } = {
+  '文本处理工具': [
+    {
+      name: 'JSON 格式化器',
+      description: '美化和压缩 JSON 数据，验证 JSON 语法错误',
+      toolPath: '/tools/json-formatter'
+    },
+    {
+      name: 'Base64 编码解码器',
+      description: '文本与 Base64 格式之间的相互转换工具'
+    },
+    {
+      name: 'URL 编码解码器',
+      description: '处理 URL 参数的编码和解码操作'
+    },
+    {
+      name: 'Markdown 预览器',
+      description: '实时预览 Markdown 文档的渲染效果'
+    },
+    {
+      name: '正则表达式测试器',
+      description: '测试和验证正则表达式的匹配结果'
+    },
+    {
+      name: '文本差异对比',
+      description: '比较两段文本的差异并高亮显示'
+    }
+  ],
+  '开发者工具': [
+    {
+      name: '颜色选择器',
+      description: 'RGB、HEX、HSL 等颜色格式转换和调色板'
+    },
+    {
+      name: 'CSS 生成器',
+      description: '生成阴影、渐变、动画等 CSS 代码'
+    },
+    {
+      name: '二维码生成器',
+      description: '将文本或链接转换为二维码图片'
+    },
+    {
+      name: '哈希计算器',
+      description: '计算文本的 MD5、SHA1、SHA256 等哈希值'
+    },
+    {
+      name: '时间戳转换器',
+      description: 'Unix 时间戳与标准日期格式互相转换'
+    },
+    {
+      name: 'UUID 生成器',
+      description: '生成各种版本的唯一标识符 UUID'
+    }
+  ],
+  '计算工具': [
+    {
+      name: '单位转换器',
+      description: '长度、重量、温度、面积等单位换算'
+    },
+    {
+      name: '进制转换器',
+      description: '二进制、八进制、十进制、十六进制互转'
+    },
+    {
+      name: '密码生成器',
+      description: '根据自定义规则生成安全密码'
+    },
+    {
+      name: 'Lorem Ipsum 生成器',
+      description: '生成用于设计和排版的占位文本'
+    },
+    {
+      name: '百分比计算器',
+      description: '计算百分比、增长率、折扣等'
+    }
+  ],
+  '图片工具': [
+    {
+      name: '图片压缩器',
+      description: '在浏览器中压缩图片文件大小'
+    },
+    {
+      name: '图片格式转换',
+      description: 'JPEG、PNG、WebP 等格式互相转换'
+    },
+    {
+      name: '图片尺寸调整',
+      description: '批量调整图片的宽度和高度'
+    },
+    {
+      name: '图片滤镜',
+      description: '为图片添加各种视觉效果和滤镜'
+    }
+  ],
+  '网络工具': [
+    {
+      name: 'IP 地址查询',
+      description: '查询 IP 地址的地理位置和网络信息'
+    },
+    {
+      name: 'User Agent 解析',
+      description: '解析和分析浏览器 User Agent 字符串'
+    },
+    {
+      name: 'HTTP 状态码查询',
+      description: '查询 HTTP 状态码的含义和说明'
+    }
+  ]
+};
 
-export const generateTools = (count: number = 28): Tool[] => {
-  const tools: Tool[] = [];
-  
-  for (let i = 0; i < count; i++) {
-    tools.push({
-      id: i + 1,
-      name: toolNames[i % toolNames.length],
-      description: toolDescriptions[i % toolDescriptions.length]
+export const generateCategorizedTools = (): ToolCategory[] => {
+  const categories: ToolCategory[] = [];
+  let toolId = 1;
+
+  Object.entries(toolsData).forEach(([categoryTitle, tools]) => {
+    const categoryTools: Tool[] = tools.map(tool => ({
+      id: toolId++,
+      name: tool.name,
+      description: tool.description,
+      category: categoryTitle,
+      toolPath: tool.toolPath
+    }));
+
+    categories.push({
+      title: categoryTitle,
+      tools: categoryTools
     });
-  }
+  });
+
+  return categories;
+};
+
+// 保持向后兼容的函数
+export const generateTools = (count: number = 28): Tool[] => {
+  const categories = generateCategorizedTools();
+  const allTools: Tool[] = [];
   
-  return tools;
+  categories.forEach(category => {
+    allTools.push(...category.tools);
+  });
+  
+  return allTools.slice(0, count);
 };

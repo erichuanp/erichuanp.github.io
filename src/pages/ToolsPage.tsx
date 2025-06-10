@@ -2,10 +2,11 @@ import React from 'react';
 import SearchBar from '../components/common/SearchBar';
 import ToolCard from '../components/tools/ToolCard';
 import PageTransition from '../components/common/PageTransition';
-import { generateTools } from '../utils/generateToolData';
+import { generateCategorizedTools } from '../utils/generateToolData';
+import { motion } from 'framer-motion';
 
 const ToolsPage: React.FC = () => {
-  const tools = generateTools(28);
+  const toolCategories = generateCategorizedTools();
 
   return (
     <PageTransition>
@@ -19,14 +20,31 @@ const ToolsPage: React.FC = () => {
         
         <SearchBar placeholder="Search tools..." />
         
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {tools.map((tool, index) => (
-            <ToolCard
-              key={tool.id}
-              name={tool.name}
-              description={tool.description}
-              index={index}
-            />
+        <div className="space-y-12">
+          {toolCategories.map((category, categoryIndex) => (
+            <motion.section
+              key={category.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+              className="space-y-6"
+            >
+              <div className="border-b border-gray-200 pb-4">
+                <h2 className="text-2xl font-bold text-gray-900">{category.title}</h2>
+              </div>
+              
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {category.tools.map((tool, toolIndex) => (
+                  <ToolCard
+                    key={tool.id}
+                    name={tool.name}
+                    description={tool.description}
+                    index={toolIndex}
+                    toolPath={tool.toolPath}
+                  />
+                ))}
+              </div>
+            </motion.section>
           ))}
         </div>
       </div>

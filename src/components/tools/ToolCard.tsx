@@ -1,16 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 interface ToolCardProps {
   name: string;
   description: string;
   index: number;
+  toolPath?: string;
 }
 
-const ToolCard: React.FC<ToolCardProps> = ({ name, description, index }) => {
+const ToolCard: React.FC<ToolCardProps> = ({ name, description, index, toolPath }) => {
+  const navigate = useNavigate();
+
   const handleClick = () => {
-    // 这里可以添加点击后的逻辑，比如跳转到工具详情页
-    console.log(`Clicked on ${name}`);
+    if (toolPath) {
+      navigate(toolPath);
+    } else {
+      // 默认行为，可以显示"功能开发中"的提示
+      console.log(`${name} 功能开发中...`);
+    }
   };
 
   return (

@@ -13,6 +13,9 @@ import ToolsPage from './pages/ToolsPage';
 import ContactsPage from './pages/ContactsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
+// Tools
+import JsonFormatter from './tools/JsonFormatter';
+
 function App() {
   const location = useLocation();
 
@@ -24,6 +27,7 @@ function App() {
           <Route path="blogs" element={<BlogsPage />} />
           <Route path="blogs/:category" element={<BlogCategoryPage />} />
           <Route path="tools" element={<ToolsPage />} />
+          <Route path="tools/json-formatter" element={<JsonFormatter />} />
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
